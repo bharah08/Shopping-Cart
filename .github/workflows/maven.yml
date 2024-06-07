@@ -21,6 +21,8 @@ jobs:
 
     steps:
     - name: Build with Maven
+      uses: actions/checkout@v2
+    - name: build package
       run: |
-         PATH="/opt/apache-maven-3.8.7/bin:$PATH"
+         
          mvn clean install
